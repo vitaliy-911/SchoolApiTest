@@ -1,0 +1,289 @@
+{
+  "info": {
+    "_postman_id": "cf9e98fb-99a3-4298-a127-78d54f5f2ea0",
+    "name": "MyAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21656824"
+  },
+  "item": [
+    {
+      "name": "school",
+      "item": [
+        {
+          "name": "schools",
+          "item": [
+            {
+              "name": "getAllSchools",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/school/schools",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "school",
+                    "schools"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getSchoolHello",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/school/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "school",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getSchoolById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/school/schoolId?idSchool=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "school",
+                    "schoolId"
+                  ],
+                  "query": [
+                    {
+                      "key": "idSchool",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "pupils",
+          "item": [
+            {
+              "name": "getPupilHello",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/pupil/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "pupil",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getAllPupilsBySchoolId",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/pupil/pupils?idSchool=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "pupil",
+                    "pupils"
+                  ],
+                  "query": [
+                    {
+                      "key": "idSchool",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getPupilByPupilIdAndSchoolId",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/pupil/pupil?idSchool=1&idPupil=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "pupil",
+                    "pupil"
+                  ],
+                  "query": [
+                    {
+                      "key": "idSchool",
+                      "value": "1"
+                    },
+                    {
+                      "key": "idPupil",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "deletePupilBySchoolIdAndPupilId",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/pupil/del?idSchool=1&idPupil=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "pupil",
+                    "del"
+                  ],
+                  "query": [
+                    {
+                      "key": "idSchool",
+                      "value": "1"
+                    },
+                    {
+                      "key": "idPupil",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "addPupilToSchoolId",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"firstName\": \"Korben\",\n    \"lastName\": \"Dallas\",\n    \"gender\": \"MALE\",\n    \"clazz\": \"9\",\n    \"postfixClazz\": \"A\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/pupil/add?idSchool=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "pupil",
+                    "add"
+                  ],
+                  "query": [
+                    {
+                      "key": "idSchool",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editPupilBySchoolIdAndPupilId",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"firstName\": \"Lilu\",\n    \"lastName\": \"Dallas\",\n    \"gender\": \"FEMALE\",\n    \"clazz\": \"9\",\n    \"postfixClazz\": \"A\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8083/v1/api/pupil/edit?idSchool=1&idPupil=2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8083",
+                  "path": [
+                    "v1",
+                    "api",
+                    "pupil",
+                    "edit"
+                  ],
+                  "query": [
+                    {
+                      "key": "idSchool",
+                      "value": "1"
+                    },
+                    {
+                      "key": "idPupil",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
