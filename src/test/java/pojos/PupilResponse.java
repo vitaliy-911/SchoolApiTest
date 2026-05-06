@@ -1,13 +1,16 @@
 package pojos;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 @Builder
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class PupilResponse {
-    private int id;
+    private int idPupil;
+    private String firstName;
+    private String lastName;
+    private String gender;
+    private int clazz;
+    private String postfixClazz;
 }
+

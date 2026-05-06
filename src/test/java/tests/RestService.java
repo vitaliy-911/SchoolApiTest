@@ -1,4 +1,4 @@
-package services;
+package tests;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -9,7 +9,6 @@ public abstract class RestService {
     protected RequestSpecification REQ_SPEC;
 
     RestService() {
-
         REQ_SPEC = new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
                 .setBasePath(getBasePath())
